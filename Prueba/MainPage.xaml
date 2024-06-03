@@ -6,7 +6,7 @@
              Shell.BackgroundColor="Purple"
              Title="Recargatelefonica">
     
-    <VerticalStackLayout Padding="30">
+    <VerticalStackLayout Padding="30">b
         <Label Text="Ingrese el número de teléfono:" HorizontalOptions="Center"
                FontSize="25"
                TextColor="Black"
