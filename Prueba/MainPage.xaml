@@ -4,17 +4,21 @@
              x:Class="Prueba.MainPage"
              BackgroundColor="White"
              Shell.BackgroundColor="Purple"
-             Title="Recargatelefonica">
-    
-    <VerticalStackLayout Padding="30">b
+             Title="Recarga telefonica ">
+
+    <VerticalStackLayout Padding="30">
         <Label Text="Ingrese el número de teléfono:" HorizontalOptions="Center"
                FontSize="25"
                TextColor="Black"
                x:Name="NumerotelefonoML"/>
         <Entry Placeholder="Numero de teléfono"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
            x:Name="entnumerotelefonoML"
            Keyboard="Numeric"/>
         <Label Text="Seleccione el operador:"
+              
+       
              FontSize="20"
              TextColor="Black"
              x:Name="lblOperator"/>
