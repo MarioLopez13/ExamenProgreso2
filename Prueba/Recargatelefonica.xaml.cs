@@ -19,7 +19,7 @@ public partial class Recargatelefonica : ContentPage
 
     private async void OnRechargeClicked(object sender, EventArgs e)
     {
-        bool confirm = await DisplayAlert("Confirmación", $"¿Desea recargar {count} dolares?", "Si", "No");
+        bool confirm = await DisplayAlert("Confirmacion", $"¿Desea recargar {count} dolares?", "Si", "No");
         if (confirm)
         {
             string phoneNumber = entnumerotelefonoML.Text;

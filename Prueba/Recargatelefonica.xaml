@@ -43,6 +43,10 @@
                  GroupName="RechargeAmount"
                  Value="10"
                  CheckedChanged="OnAmountChanged"/>
+        <Button Text="Recargar"
+            BackgroundColor="Purple"
+            TextColor="White"
+            Clicked="OnRechargeClicked"/>
         
     </VerticalStackLayout>
 </ContentPage>

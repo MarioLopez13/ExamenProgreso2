@@ -1,63 +1,55 @@
-﻿ ﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Prueba.MainPage"
-             BackgroundColor="Purple"
-             Title="Programa Recarga telefónica"/>
-
+             BackgroundColor="White"
+             Shell.BackgroundColor="Purple"
+             Title="Recargatelefonica">
+    
     <VerticalStackLayout Padding="30">
-    <Label Text="Ingrese el número de teléfono:" 
+        <Label Text="Ingrese el número de teléfono:" HorizontalOptions="Center"
                FontSize="25"
                TextColor="Black"
                x:Name="NumerotelefonoML"/>
-
-    <Entry Placeholder="Numero de teléfono"
-               x:Name="entnumerotelefonoML"
-               Keyboard="Numeric"/>
-
-    <Label Text="Seleccione el operador:"
-               FontSize="20"
-               TextColor="Black"
-               x:Name="lblOperator"/>
-
-    <Picker x:Name="picker">
-        <Picker.ItemsSource>
-            <x:Array Type="{x:Type x:String}">
-                <x:String>Claro</x:String>
-                <x:String>Movistar</x:String>
-                <x:String>Tuenti</x:String>
-            </x:Array>
-        </Picker.ItemsSource>
-    </Picker>
-
-    <Label Text="Seleccione el valor de la recarga:"
-               FontSize="20"
-               TextColor="Black"
-               x:Name="lblAmount"/>
-
-    <RadioButton Content="3 dólares" 
-                     GroupName="RechargeAmount"
-                     Value="3"
-                     CheckedChanged="OnAmountChanged"/>
-    <RadioButton Content="5 dólares" 
-                     GroupName="RechargeAmount"
-                     Value="5"
-                     IsChecked="True"
-                     CheckedChanged="OnAmountChanged"/>
-    <RadioButton Content="10 dólares" 
-                     GroupName="RechargeAmount"
-                     Value="10"
-                     CheckedChanged="OnAmountChanged"/>
-
-    <Label x:Name="lblcount"
-               Text="Ha seleccionado una recarga de: 5 dólares"
-               FontSize="15"
-               TextColor="Black"/>
-
-    <Button Text="Recargar"
-                BackgroundColor="Purple"
-                TextColor="White"
-                Clicked="OnRechargeClicked"/>
-</VerticalStackLayout>
-
+        <Entry Placeholder="Numero de teléfono"
+           x:Name="entnumerotelefonoML"
+           Keyboard="Numeric"/>
+        <Label Text="Seleccione el operador:"
+             FontSize="20"
+             TextColor="Black"
+             x:Name="lblOperator"/>
+        <Picker x:Name="picker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Claro</x:String>
+                    <x:String>Movistar</x:String>
+                    <x:String>Tuenti</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="Seleccione el valor de la recarga:"
+            FontSize="20"
+            TextColor="Black"
+            x:Name="lblcount"/>
+        <RadioButton Content="3 dolares" 
+                 GroupName="RechargeAmount"
+                 Value="3"
+                 CheckedChanged="OnAmountChanged"/>
+        <RadioButton Content="5 dolares" 
+                 GroupName="RechargeAmount"
+                 Value="5"
+                 IsChecked="True"
+                 CheckedChanged="OnAmountChanged"/>
+        <RadioButton Content="10 dolares" 
+                 GroupName="RechargeAmount"
+                 Value="10"
+                 CheckedChanged="OnAmountChanged"/>
+        <Button Text="Recargar" 
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+            BackgroundColor="Purple"
+            TextColor="White"
+            Clicked="OnRechargeClicked"/>
+        
+    </VerticalStackLayout>
 </ContentPage>
