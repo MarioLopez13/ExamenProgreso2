@@ -2,23 +2,33 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        private int count = 5;
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void OnAmountChanged(object sender, CheckedChangedEventArgs e)
         {
-            count++;
+            if (e.Value)
+            {
+                var radioButton = sender as RadioButton;
+                count = int.Parse(radioButton.Value.ToString());
+                lblcount.Text = $"Ha seleccionado una recarga de: {count} dólares";
+            }
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private async void OnRechargeClicked(object sender, EventArgs e)
+        {
+            bool confirm = await DisplayAlert("Confirmación", $"¿Desea recargar {count} dolares?", "Si", "No");
+            if (confirm)
+            {
+                string phoneNumber = entnumerotelefonoML.Text;
+                string operatorName = picker.SelectedItem.ToString();
+                string rechargeDetails = $"Se hizo una recarga de {count} dólares en la siguiente fecha; {DateTime.Now.ToString("dd/MM/yyyy")}";
+                await DisplayAlert("Finalizado", "Recarga exitosa", "OK");
+            }
         }
     }
 
